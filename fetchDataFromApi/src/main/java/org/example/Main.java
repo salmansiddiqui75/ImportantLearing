@@ -16,9 +16,11 @@ public class Main {
 
         String countryName="india";
         String phone="75708687";
-        //creating connection with url
+        //First we need to creat the obj of api
         String apiUrl="https://jsonmock.hackerrank.com/api/countries?name=" + countryName;
         URL url=new URL(apiUrl);
+        
+        //creating connection with url
         HttpURLConnection connection= (HttpURLConnection) url.openConnection();
         connection.setRequestMethod("GET");
         connection.connect();
